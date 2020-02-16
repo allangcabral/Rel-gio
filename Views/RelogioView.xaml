@@ -34,5 +34,12 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <TextBlock Grid.Row="1" Text="{Binding Segundo, FallbackValue=0}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+
+        <Ellipse Grid.RowSpan="2" Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"  Stroke="Black" StrokeThickness="2"></Ellipse>
+
+        <Grid Grid.RowSpan="2" Margin="0,40">
+            <Ellipse Grid.RowSpan="2" Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"  Stroke="Black" StrokeThickness="2"></Ellipse>
+        </Grid>
+        
     </Grid>
 </Window>
