@@ -4,9 +4,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Relogio"
+        xmlns:cvt="clr-namespace:Relogio.Helpers"
         mc:Ignorable="d"
         Title="Relógio" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <cvt:SegundoToAngle x:Key="SegundoToAngle"/>
+        <cvt:HoraToAngle x:Key="HoraToAngle"/>
+    </Window.Resources>
+    
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Width="5" HorizontalAlignment="Center" VerticalAlignment="Stretch" Fill="Black" RenderTransformOrigin="0,1">
+            <Rectangle.RenderTransform >
+                <RotateTransform  Angle="{Binding Minuto, Converter={StaticResource SegundoToAngle}}"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="10" HorizontalAlignment="Center" VerticalAlignment="Stretch" Fill="Black" Margin="0,50,0,0" RenderTransformOrigin="0,1">
+            <Rectangle.RenderTransform >
+                <RotateTransform  Angle="{Binding Hora, Converter={StaticResource HoraToAngle}}"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" HorizontalAlignment="Center" VerticalAlignment="Stretch" Fill="Red" RenderTransformOrigin="0,1">
+            <Rectangle.RenderTransform >
+                <RotateTransform  Angle="{Binding Segundo, Converter={StaticResource SegundoToAngle}}"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <TextBlock Grid.Row="1" Text="{Binding Segundo, FallbackValue=0}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Relogio.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace Relogio.Views
     /// </summary>
     public partial class RelogioView : Window
     {
+        private RelogioViewModel _viewModel;
+
         public RelogioView()
         {
             InitializeComponent();
+            _viewModel = new RelogioViewModel();
+            this.DataContext = _viewModel;
         }
     }
 }
