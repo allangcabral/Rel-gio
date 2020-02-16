@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Relógio
+namespace Relogio.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for RelogioView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RelogioView : Window
     {
-        public MainWindow()
+        public RelogioView()
         {
             InitializeComponent();
         }
