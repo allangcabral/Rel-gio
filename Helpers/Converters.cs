@@ -28,7 +28,7 @@ namespace Relogio.Helpers
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double valor = (int)value >=12 ? (int)value % 12 : (int)value;
+            double valor = (double)value >=12 ? (double)value % 12 : (double)value;
             double t = (double)(valor * (360 / 12));
             return (double)(valor * (360 / 12));
         }

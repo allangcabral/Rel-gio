@@ -6,14 +6,14 @@
              xmlns:local="clr-namespace:Relogio.UserControls"
              xmlns:cvt="clr-namespace:Relogio.Helpers"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" >
+             d:DesignHeight="50" d:DesignWidth="50" >
 
     <UserControl.Resources>
         <cvt:LigadoToCor x:Key="ligado"/>
 
-        <SolidColorBrush x:Key="CorLigada" Color="Black"/>
-        <SolidColorBrush x:Key="CorDesligada" Color="Yellow"/>
-        
+        <SolidColorBrush x:Key="CorLigada" Color="{Binding Path=CorLigada, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        <SolidColorBrush x:Key="CorDesligada" Color="{Binding Path=CorDesligada, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+
     </UserControl.Resources>
     
     <Grid>

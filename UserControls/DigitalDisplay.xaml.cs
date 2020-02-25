@@ -76,57 +76,28 @@ namespace Relogio.UserControls
             sender.Valor = Convert.ToInt16(e.NewValue);
         }
 
-        //private static void OnValorChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        //{
-        //    switch (e.NewValue)
-        //    {
-        //        case 0:
-        //            PartesLigadas = Ligados.P0 | Ligados.P1 | Ligados.P2 | Ligados.P3 | Ligados.P4 | Ligados.P5;
-        //            break;
-        //        case 1:
-        //            PartesLigadas = Ligados.P3 | Ligados.P4;
-        //            break;
-        //        case 2:
-        //            PartesLigadas = Ligados.P2 | Ligados.P3 | Ligados.P11 | Ligados.P7 | Ligados.P0 | Ligados.P5;
-        //            break;
-        //        case 3:
-        //            PartesLigadas = Ligados.P2 | Ligados.P3 | Ligados.P4 | Ligados.P5 | Ligados.P11 | Ligados.P7;
-        //            break;
-        //        case 4:
-        //            PartesLigadas = Ligados.P1 | Ligados.P1 | Ligados.P7 | Ligados.P11 | Ligados.P3 | Ligados.P4;
-        //            break;
-        //        case 5:
-        //            PartesLigadas = Ligados.P2 | Ligados.P1 | Ligados.P7 | Ligados.P11 | Ligados.P4 | Ligados.P5;
-        //            break;
-        //        case 6:
-        //            PartesLigadas = Ligados.P2 | Ligados.P1 | Ligados.P0 | Ligados.P5 | Ligados.P4 | Ligados.P11 | Ligados.P7;
-        //            break;
-        //        case 7:
-        //            PartesLigadas = Ligados.P2 | Ligados.P3 | Ligados.P4;
-        //            break;
-        //        case 8:
-        //            PartesLigadas = Ligados.P0 | Ligados.P1 | Ligados.P2 | Ligados.P3 | Ligados.P4 | Ligados.P5 | Ligados.P11 | Ligados.P7;
-        //            break;
-        //        case 9:
-        //            PartesLigadas = Ligados.P1 | Ligados.P2 | Ligados.P3 | Ligados.P4 | Ligados.P5 | Ligados.P11 | Ligados.P7;
-        //            break;
-        //        default:
-        //            PartesLigadas = Ligados.Nenhum;
-        //            break;
-        //    }
-        //}
 
-        private int _teste;
-
-        public int Teste
+        public Color CorLigada
         {
-            get { return _teste; }
-            set 
-            { 
-                _teste = value;
-                MontarNumero(value);
-            }
+            get { return (Color)GetValue(CorLigadaProperty); }
+            set { SetValue(CorLigadaProperty, value); }
         }
+
+        // Using a DependencyProperty as the backing store for CorLigada.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CorLigadaProperty =
+            DependencyProperty.Register("CorLigada", typeof(Color), typeof(DigitalDisplay), new PropertyMetadata(Colors.Black));
+
+
+
+        public Color CorDesligada
+        {
+            get { return (Color)GetValue(CorDesligadaProperty); }
+            set { SetValue(CorDesligadaProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CorDesligada.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CorDesligadaProperty =
+            DependencyProperty.Register("CorDesligada", typeof(Color), typeof(DigitalDisplay), new PropertyMetadata(Colors.Transparent));
 
 
 
@@ -134,11 +105,8 @@ namespace Relogio.UserControls
         {
             InitializeComponent();
 
-
-            Valor = 10;
         }
 
-        
 
         private void MontarNumero(int numero)
         {

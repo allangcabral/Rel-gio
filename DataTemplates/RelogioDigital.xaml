@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Relogio.DataTemplates"
+                    xmlns:usc="clr-namespace:Relogio.UserControls">
+
+    <DataTemplate x:Key="templateRelogioDigital">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalHora, Mode=TwoWay}" MaxWidth="50"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeHora, Mode=TwoWay}" MaxWidth="50"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalMinuto, Mode=TwoWay}" MaxWidth="50"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeMinuto, Mode=TwoWay}" MaxWidth="50"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalSegundo, Mode=TwoWay}" MaxWidth="50"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeSegundo, Mode=TwoWay}" MaxWidth="50"/>
+        </StackPanel>
+    </DataTemplate>
+    
+</ResourceDictionary>
