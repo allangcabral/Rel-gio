@@ -20,21 +20,29 @@
                 <ColumnDefinition Width="60*"/>
                 <ColumnDefinition Width="40*"/>
             </Grid.ColumnDefinitions>
-            <ContentControl ContentTemplate="{StaticResource templateRelogioAnalogico}" Content="{Binding}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Analógico" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ContentControl Grid.Row="1" ContentTemplate="{StaticResource templateRelogioAnalogico}" Content="{Binding}"/>
+            </Grid>
+            
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50*"/>
                     <RowDefinition Height="50*"/>
                 </Grid.RowDefinitions>
 
-                <Grid>
+                <Grid Background="Gray">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
-                        <RowDefinition Height="70*"/>
+                        <RowDefinition Height="70*" />
                         <RowDefinition Height="30*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Text="Digital" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    <ContentControl Grid.Row="1" ContentTemplate="{StaticResource templateRelogioDigital}" Content="{Binding}"/>
+                    <ContentControl Grid.Row="1" ContentTemplate="{StaticResource templateRelogioDigital}" Content="{Binding}" Background="Gray"/>
                 </Grid>
                 
             </Grid>

@@ -5,12 +5,12 @@
 
     <DataTemplate x:Key="templateRelogioDigital">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
-            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalHora, Mode=TwoWay}" MaxWidth="50"/>
-            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeHora, Mode=TwoWay}" MaxWidth="50"/>
-            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalMinuto, Mode=TwoWay}" MaxWidth="50"/>
-            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeMinuto, Mode=TwoWay}" MaxWidth="50"/>
-            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalSegundo, Mode=TwoWay}" MaxWidth="50"/>
-            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeSegundo, Mode=TwoWay}" MaxWidth="50"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalHora, Mode=TwoWay}" MaxWidth="50" Margin="2"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeHora, Mode=TwoWay}" MaxWidth="50" Margin="2" />
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalMinuto, Mode=TwoWay}" MaxWidth="50" Margin="2"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeMinuto, Mode=TwoWay}" MaxWidth="50" Margin="2"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding DecimalSegundo, Mode=TwoWay}" MaxWidth="50" Margin="2"/>
+            <usc:DigitalDisplay HorizontalAlignment="Center" VerticalAlignment="Top" Valor="{Binding UnidadeSegundo, Mode=TwoWay}" MaxWidth="50" Margin="2"/>
         </StackPanel>
     </DataTemplate>
     

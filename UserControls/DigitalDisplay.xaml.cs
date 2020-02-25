@@ -68,7 +68,7 @@ namespace Relogio.UserControls
 
         // Using a DependencyProperty as the backing store for Valor.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ValorProperty =
-            DependencyProperty.Register("Valor", typeof(int), typeof(DigitalDisplay),new UIPropertyMetadata(0,OnValorChanged));
+            DependencyProperty.Register("Valor", typeof(int), typeof(DigitalDisplay),new UIPropertyMetadata(-1,OnValorChanged));
 
         private static void OnValorChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
