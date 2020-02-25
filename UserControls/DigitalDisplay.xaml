@@ -1,0 +1,265 @@
+﻿<UserControl x:Class="Relogio.UserControls.DigitalDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Relogio.UserControls"
+             xmlns:cvt="clr-namespace:Relogio.Helpers"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" >
+
+    <UserControl.Resources>
+        <cvt:LigadoToCor x:Key="ligado"/>
+
+        <SolidColorBrush x:Key="CorLigada" Color="Black"/>
+        <SolidColorBrush x:Key="CorDesligada" Color="Yellow"/>
+        
+    </UserControl.Resources>
+    
+    <Grid>
+        <!--<TextBlock Text="{Binding Valor, RelativeSource={RelativeSource AncestorType=UserControl}, FallbackValue=0}" FontSize="30"/>-->
+        <Viewbox Stretch="Uniform">
+            <Grid>
+                
+                <Path Name="p0">
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P0}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M650.002 6400.002c0 5.996 142.002 151.992 315 325l315 313.994v2241.006v2240l-320 320   c-176.006 175.996-321.006 320-322.998 318.994c-1.006 0-145-143.994-319.004-320L0.002 11520.002v-2240v-2240l315-315   c172.998-173.008 315-319.004 315-325" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p1" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P1}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M630.002 6400.002c0-6.006-142.002-152.002-315-325l-315-315v-2240v-2240l320-320l320-320l320 320l320 320v2240v2240.996   l-315 314.004c-172.998 172.998-315 318.994-315 325" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p2">
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas,  RelativeSource={RelativeSource AncestorType=UserControl},Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P2}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M1277.004 958.997L960.002 640.003l320-320l320-320h2880h2880l320 320l320 320l-320 320l-320 320l-2883.008-1.006   l-2881.992-0.996L1277.004 958.997z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p3">
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P3}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M8310.002 6400.002c0-6.006-142.002-152.002-315-325l-315-314.004V3520.002v-2240l320-320l320-320l320 320l320 320v2240   v2240l-315 315c-173.008 172.998-315 318.994-315 325" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p4" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P4}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M8330.002 6400.002c0 5.996 141.992 151.992 315 325l315 315v2240v2240l-320 320   c-176.006 175.996-321.006 320-322.002 318.994c-2.002 0-146.006-143.994-320-320l-317.998-318.994v-2240V7038.996l315-313.994   c172.998-173.008 315-319.004 315-325" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p5" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P5}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M1277.004 12478.996l-317.002-318.994l320-320l320-320h2880h2880l320 320l320 320l-320 320l-320 319.999l-2883.008-1.006   l-2881.992-0.996L1277.004 12478.996z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p6" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P6}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M1600.998 10718v-482.998l797.998-1435l797.998-1435l162.002-3.008l161.006-1.992v320v320l-800 1600l-800 1600h-160h-160   L1600.998 10718z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p7" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P7}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M1277.004 6718.996l-317.002-318.994l320-320l320-320h960h960l320 320l320 320l-320 320l-320 320l-962.998-1.006   L1595.002 7038L1277.004 6718.996z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p8">
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P8}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M3175.998 5398c-12.998-24.004-372.998-672.001-800-1440l-775.996-1397.998v-480v-480h160h160l800 1600l800 1600v320v320   h-160h-159.004L3175.998 5398z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p9" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P9}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M4158 6078.996l-317.998-318.994v-2080v-2080h640h640v2080v2080l-320 320c-176.006 175.996-321.006 320-323.008 318.994   C4475.998 6398.996 4331.994 6255.002 4158 6078.996z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p10" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P10}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M5440.002 5120.002v-320l800-1600l800-1600h160h160L7358.996 2083v482.002l-797.998 1435l-797.998 1435L5600.998 5438   l-160.996 2.002V5120.002z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p11" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P11}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M5116.994 6718.996l-316.992-318.994l320-320l320-320h800h800l320 320l320 320l-320 320l-320 320l-803.008-1.006   L5435.002 7038L5116.994 6718.996z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p12" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P12}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M6240.002 9600.002l-800-1600v-320v-320l160.996 1.992l162.002 3.008l797.998 1435l797.998 1435V10718l1.006 482.002h-160   h-160L6240.002 9600.002z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+                <Path Name="p13" >
+                    <Path.Style>
+                        <Style TargetType="Path">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=PartesLigadas, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource ligado}, ConverterParameter={x:Static local:Ligados.P13}}" Value="True">
+                                    <Setter Property="Fill" Value="{StaticResource CorLigada}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Style.Setters>
+                                <Setter Property="Fill" Value="{StaticResource CorDesligada}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Path.Style>
+                    <Path.Data>
+                        <PathGeometry Figures="M3840.002 9280.002v-1920l320-320l320-320l320 320l320 320v1920v1920h-640h-640V9280.002z" FillRule="NonZero"/>
+                    </Path.Data>
+                </Path>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</UserControl>
